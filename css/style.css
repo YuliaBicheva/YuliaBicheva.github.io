@@ -106,14 +106,14 @@ li {
 
 .site-header > .wrap{
 	width: 100%;
-	max-width: 960px;
-	padding: 25px 5%;
+	max-width: 980px;
+	padding: 25px 0;
 	margin: 0 auto;
 }
 
 .title-area{
 	position: absolute;
-	top: 75;
+	top: 80;
 }
 
 .logo{
@@ -135,8 +135,10 @@ li {
 }
 
 .nav-primary{
-	width: 100%;
-	margin-left: 187px;
+	display: inline-block;
+	float: left;
+	width: calc(980px - 147px - 186px);
+	margin-left: 147px;
 }
 
 .nav-menu .menu-item{
@@ -159,12 +161,41 @@ li {
 	border-top: 1px solid #b62c20;
 }
 
+.icons{
+	float: right;
+	width: 186px;
+}
+a.social-icon{
+	display: inline-block;
+	float: right;
+	background-image: url(../images/icons.png);
+	background-repeat: no-repeat;
+	width: 26px;
+	height: 26px;
+	margin-left: 5px;
+}
+
+.facebook{
+	background-position: 0px -26px;
+}
+.twitter{
+	background-position: -26px -52px;
+}
+.dribble{
+	background-position: -26px 0px;
+}
+.behance{
+	background-position: 0px 0px;
+}
+.googleplus{
+	background-position: -26px -26px;
+}
+.rss{
+	background-position: 0px -52px;
+}
 
 /* ## Colour
 --------------------------------------------- */
-body{
-	
-}
 
 .site-header{
 	background-color: #fff;
