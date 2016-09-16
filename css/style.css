@@ -1,0 +1,174 @@
+/* ## Box Sizing
+--------------------------------------------- */
+*,
+*:before,
+*:after{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+}
+
+   
+/* ## Float Clearing
+--------------------------------------------- */
+.site-container:before,
+.site-header:before,
+.nav-primary:before,
+.wrap:before{
+	content:"";
+	display: table;
+}
+
+.site-container:after,
+.site-header:after,
+.nav-primary:after,
+.wrap:after{
+	content:"";
+	display: table;
+}
+
+/* ## Fonts
+--------------------------------------------- */
+@font-face {
+    font-family: 'Niagara Solid';
+	src: url('../fonts/NiagaraSolidRegular.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/NiagaraSolidRegular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/NiagaraSolidRegular.woff2') format('woff2'), /* Modern Browsers */
+    url('../fonts/NiagaraSolidRegular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/NiagaraSolidRegular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/NiagaraSolidRegular.svg') format('svg'); /* Legacy iOS */  
+    font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: 'Myriad';
+  src: url('../fonts/myriad-mm.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/myriad-mm.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/myriad-mm.woff2') format('woff2'), /* Modern Browsers */
+    url('../fonts/myriad-mm.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/myriad-mm.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/myriad-mm.svg') format('svg'); /* Legacy iOS */  
+    font-weight: normal;
+  	font-style: normal;
+}
+
+/* ## Defaults
+--------------------------------------------- */
+html{
+    font-size: 62.5%; /* 10px browser default */
+    height: 100%;
+}
+
+/* Chrome fix */
+body > div {
+    font-size: 2rem;
+}
+
+body{
+	background: url(../images/background.png) repeat;
+	color: #9c9b9b;
+	font-family: 'Myriad', sans-serif;
+	font-size: 14px;
+    font-size: 1.4rem;
+    -webkit-font-smoothing: antialiased;
+	margin: 0;
+}
+
+a{	
+	text-decoration: none;
+	display:block;
+	color: #9c9b9b;
+	width: 100%;
+}
+
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* ## Structure
+--------------------------------------------- */
+.site-container{
+	height: auto;
+	margin: 0 auto;
+	padding: 0;	
+}
+
+.site-header{
+	margin-top: 104px;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+.site-header > .wrap{
+	width: 100%;
+	max-width: 960px;
+	padding: 25px 5%;
+	margin: 0 auto;
+}
+
+.title-area{
+	position: absolute;
+	top: 75;
+}
+
+.logo{
+	width: 130px;
+	height: 130px;
+	border: 8px solid rgba(92, 92, 91, 0.22);
+	border-radius:50%;
+}
+
+.site-title{
+	display: block;
+	padding:0;
+	margin:0;
+}
+
+.site-title a{
+	font-family: 'Niagara Solid', sans-serif;
+	font-size: 54px;
+}
+
+.nav-primary{
+	width: 100%;
+	margin-left: 187px;
+}
+
+.nav-menu .menu-item{
+	display: inline-block;
+	text-align: left;
+	font-size: 18px;
+	font-size:1.8rem;
+	margin-left:40px;
+	text-transform: uppercase;
+}
+
+.menu-item a:hover:after,
+.menu-item a.active:after,
+.menu-item a:focus:after{
+	display: block;
+	position: relative;
+	content: "";
+	width:100%;
+	top: 11px;
+	border-top: 1px solid #b62c20;
+}
+
+
+/* ## Colour
+--------------------------------------------- */
+body{
+	
+}
+
+.site-header{
+	background-color: #fff;
+}
+
+
+
