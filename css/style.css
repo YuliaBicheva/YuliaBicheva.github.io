@@ -12,6 +12,7 @@
 --------------------------------------------- */
 .site-container:before,
 .site-header:before,
+.content-header:before,
 .nav-primary:before,
 .wrap:before{
 	content:"";
@@ -20,6 +21,7 @@
 
 .site-container:after,
 .site-header:after,
+.content-header:after,
 .nav-primary:after,
 .wrap:after{
 	content:"";
@@ -82,7 +84,12 @@ a{
 }
 
 ol,
-ul {
+ul,
+h1,
+h2,
+h3,
+h4,
+h5 {
     margin: 0;
     padding: 0;
 }
@@ -91,6 +98,23 @@ li {
     list-style-type: none;
 }
 
+h1{
+	font-size: 33px;
+	font-sixe: 3.3rem;
+	font-weight: lighter;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float:right;
+}
 /* ## Structure
 --------------------------------------------- */
 .site-container{
@@ -104,13 +128,24 @@ li {
 	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.19);
 }
 
-.site-header > .wrap{
+.wrap{
 	width: 100%;
-	max-width: 980px;
-	padding: 25px 0;
 	margin: 0 auto;
+	max-width: 980px;
 }
 
+.site-header > .wrap{
+	padding: 25px 0;
+}
+
+.content-header{
+	padding: 45px 5%;
+	margin: 0 auto;
+	margin-top: 35px;
+}
+
+/* ## Titles
+--------------------------------------------- */
 .title-area{
 	position: absolute;
 	top: 80;
@@ -134,25 +169,52 @@ li {
 	font-size: 54px;
 }
 
+.brand{
+	color: #b62c20;
+}
+
+/* ## Menu
+--------------------------------------------- */
 .nav-primary{
-	display: inline-block;
-	float: left;
+	display: block;
 	width: calc(980px - 147px - 186px);
 	margin-left: 147px;
 }
 
-.nav-menu .menu-item{
+.nav-content{
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.nav-menu .menu-item,
+.sort-menu .menu-item{
 	display: inline-block;
+	text-transform: uppercase;
+}
+
+.sort-menu .menu-item{
+	margin-left: 12px;
+}
+
+.sort-menu .menu-item:before{
+	content:"/";
+	position:relative;
+	bottom: 0;
+	right:0;
+}
+
+.nav-menu .menu-item{
 	text-align: left;
 	font-size: 18px;
 	font-size:1.8rem;
 	margin-left:40px;
-	text-transform: uppercase;
 }
 
-.menu-item a:hover:after,
-.menu-item a.active:after,
-.menu-item a:focus:after{
+.nav-menu .menu-item a:hover:after,
+.nav-menu .menu-item a.active:after,
+.nav-menu .menu-item a:focus:after{
 	display: block;
 	position: relative;
 	content: "";
@@ -161,13 +223,16 @@ li {
 	border-top: 1px solid #b62c20;
 }
 
+
+/* ## Widgets
+--------------------------------------------- */
 .icons{
-	float: right;
+	display: inline-block;
 	width: 186px;
 }
-a.social-icon{
-	display: inline-block;
-	float: right;
+.social-icon{
+	display: block;
+	float:left;
 	background-image: url(../images/icons.png);
 	background-repeat: no-repeat;
 	width: 26px;
@@ -196,9 +261,12 @@ a.social-icon{
 
 /* ## Colour
 --------------------------------------------- */
-
 .site-header{
 	background-color: #fff;
+}
+
+.content-header{
+	color: #7e7e7e;
 }
 
 
