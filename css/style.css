@@ -12,18 +12,20 @@
 --------------------------------------------- */
 .site-container:before,
 .site-header:before,
-.content-header:before,
+.content-title:before,
 .nav-primary:before,
-.wrap:before{
+.wrap:before,
+.container:before{
 	content:"";
 	display: table;
 }
 
 .site-container:after,
 .site-header:after,
-.content-header:after,
+.content-title:after,
 .nav-primary:after,
-.wrap:after{
+.wrap:after,
+.container:after{
 	content:"";
 	display: table;
 }
@@ -67,7 +69,11 @@ body > div {
 }
 
 body{
-	background: url(../images/background.png) repeat;
+	background: linear-gradient( rgba(240,239,238,.23), transparent 1px),
+				linear-gradient(90deg, rgba(240,239,238,.23), transparent 1px);
+	background-size: 10px 10px;
+	background-position: center center;
+/* 	background: url(../images/background.png) repeat; */
 	color: #9c9b9b;
 	font-family: 'Myriad', sans-serif;
 	font-size: 14px;
@@ -115,6 +121,7 @@ h1{
 .right{
 	float:right;
 }
+
 /* ## Structure
 --------------------------------------------- */
 .site-container{
@@ -138,14 +145,111 @@ h1{
 	padding: 25px 0;
 }
 
-.content-header{
-	padding: 45px 5%;
-	margin: 0 auto;
-	margin-top: 35px;
+.container{
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 30px auto;
 }
+
+/* ## Portfolio
+--------------------------------------------- */
+.square{
+	position: relative;
+	float: left;
+	width: 22.5%;
+	padding-bottom: calc(22.5% + 25px); 
+	margin: 0 0 0.816% 2.5%; /* = 20px / 245px = 0.0816, 10% / 4 = 0.25 */
+	overflow: hidden;
+}
+
+.content{
+	position: absolute;
+	width: 100%; 
+	height: 100%;
+	padding: 0;
+}
+
+.table{
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.table-cell{
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 5%;
+	padding-bottom: 25px;
+}
+
+.article-title,
+.article-group{
+	line-height: 1;
+	padding:0;
+	margin: 0;
+}
+
+
+.article-title{
+	color: #4f4e4e;
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+
+.article-group{
+	color: #868585;
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+
+p.article-image{
+	position: relative;
+	width: 100%;
+	height: 77%;
+	background: #fff;
+	box-shadow: 0 0 10px 1px rgba(0,0,0, .16);
+	padding: 0;
+	margin: 0;
+	margin-top: 14px;
+/* 	padding-bottom:  25px; */
+}
+
+.article-image > img{
+	width: auto;
+	height: auto;
+}
+
+.lupa:after{
+	display: block;
+	content:"";
+	position: absolute;
+	width: 52px;
+	height: 52px;
+	bottom: -26px;
+	right: 8px;
+	
+	border: 7px solid rgba(92,91,91,.23);
+	border-radius: 50%;
+	background-image: linear-gradient( rgba(0,0,0,.06), transparent 1px),
+					linear-gradient(90deg, rgba(0,0,0,.06), transparent 1px),
+					url(../images/lupa.png);
+	background-repeat: repeat,repeat, no-repeat;
+	background-size: 10px 10px,10px 10px,17px 14px;
+	background-position: center center;
+	background-clip: padding-box;
+	background-color: rgba(212,40,25,1);
+}
+
 
 /* ## Titles
 --------------------------------------------- */
+.content-title{
+	padding: 40px 5%;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
 .title-area{
 	position: absolute;
 	top: 80;
@@ -173,7 +277,7 @@ h1{
 	color: #b62c20;
 }
 
-/* ## Menu
+/* ## Menu and navigation
 --------------------------------------------- */
 .nav-primary{
 	display: block;
@@ -185,6 +289,7 @@ h1{
 	display: block;
 	width: 100%;
 	margin: 0 auto;
+	padding: 5px 5%;
 	text-align: center;
 }
 
@@ -192,17 +297,6 @@ h1{
 .sort-menu .menu-item{
 	display: inline-block;
 	text-transform: uppercase;
-}
-
-.sort-menu .menu-item{
-	margin-left: 12px;
-}
-
-.sort-menu .menu-item:before{
-	content:"/";
-	position:relative;
-	bottom: 0;
-	right:0;
 }
 
 .nav-menu .menu-item{
@@ -221,6 +315,26 @@ h1{
 	width:100%;
 	top: 11px;
 	border-top: 1px solid #b62c20;
+}
+
+.sort-menu .menu-item{
+	font-size: 14px;
+	font-size: 1.4rem;
+	margin-left: 12px;
+	position: relative;
+}
+
+.sort-menu .menu-item:not(:first-child):before{
+	content:"/";
+	position:absolute;
+	bottom: 0;
+	left:-10px;
+}
+
+.sort-menu .menu-item a:hover,
+.sort-menu .menu-item a:focus,
+.sort-menu .menu-item a.active{
+	color: #b62c20;
 }
 
 
@@ -265,7 +379,7 @@ h1{
 	background-color: #fff;
 }
 
-.content-header{
+.content-title{
 	color: #7e7e7e;
 }
 
