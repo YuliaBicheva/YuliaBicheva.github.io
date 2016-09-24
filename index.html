@@ -1,4 +1,3 @@
-<!doctype>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -7,7 +6,7 @@
 		
 		<title>Task manager</title>
 		<link href="css/reset.css" rel="stylesheet" type="text/css">
-		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<link href="css/test.css" rel="stylesheet" type="text/css">
 		
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,48 +19,37 @@
 		<div class="site-container">
 			<header class="site-header">
 				<div class="wrap">
-					<div class="title-area">
-						<p class="site-title">
-							<a href="#" title="Home page">
-								<svg class="logo">
-									<circle cx="50%" cy="50%" r="60" fill="#b62c20" opacity="1"/>
-									<polyline points="0,0 110,0 110,10 0,10 0,20 110,20 1100,30 0,30 0,40 110,40 110,50 0,50 0,60 110,60 110,70 0,70 0,80 110,80 110,90 0,90 0,100 110,100 110,110 0,110" fill="rgba(255,255,255,0)" stroke-width="1" stroke="rgb(171,41,30)"/>
-									<polyline points="0,0 0,110 10,110 10,0 20,0 20,110 30,110 30,0 40,0 40,110 50,110 50,0 60,0 60,110 70,110 70,0 80,0 80,110 90,110 90,0 100,0 100,110 110,110 110,0" fill="rgba(255,255,255,0)" stroke-width="1" stroke="rgb(171,41,30)"/>
-									<text x="18" y="73" fill="#fff" class="logo-text">Bright</text>
-								</svg>
-							</a>
-						</p>
-					</div>
-					
-					<nav class="nav-primary left">
-						<ul class="menu nav-menu">
-							<li class="menu-item"><a class="active" href="#">Home</a></li>
-							<li class="menu-item"><a href="#">Portfolio</a></li>
-							<li class="menu-item"><a href="#">Support</a></li>
+					<p class="title-area">
+						<a href="#" class="logo">Bright</a>
+					</p>
+					<nav id="header-menu" class="main-nav">
+						<ul class="nav-menu menu">
+							<li class="menu-item"><a href="#">Home</a></li>
+							<li class="menu-item"><a class="active" href="#">Portfolio</a></li>
 							<li class="menu-item"><a href="#">Blog</a></li>
+							<li class="menu-item"><a href="#">Support</a></li>
 							<li class="menu-item"><a href="#">Contact</a></li>
 						</ul>
 					</nav>
-					
-					<div class="icons">
-						<a class="social-icon facebook" href="#" title="Facebook"></a>
-						<a class="social-icon twitter" href="#" title="Twitter"></a>
-						<a class="social-icon dribble" href="#" title="Dribble"></a>
-						<a class="social-icon behance" href="#" title="Behance"></a>
-						<a class="social-icon googleplus" href="#" title="Google Plus"></a>
-						<a class="social-icon rss" href="#" title="RSS"></a>
+					<div class="widgets">
+						<p class="widget-item"><a class="facebook" href="#"></a></p>
+						<p class="widget-item"><a class="twitter" href="#"></a></p>
+						<p class="widget-item"><a class="dribble" href="#"></a></p>
+						<p class="widget-item"><a class="behance" href="#"></a></p>
+						<p class="widget-item"><a class="googleplus" href="#"></a></p>
+						<p class="widget-item"><a class="rss" href="#"></a></p>
 					</div>
 				</div>
 			</header>
-			
 			<div class="section">
 				<div class="wrap">
-					<h1 class="content-title text-center">
+					<h1 class="page-title text-center">
 						Welcome! This is <span class="brand">Bright</span>, a very clean Wordpress psd file theme<br/>
 						That makes it easy to showcase your work
 					</h1>
-					<nav class="nav-content">
-						<ul class="menu sort-menu">
+					
+					<nav class="filter-nav">
+						<ul class="filter-menu menu">
 							<li class="menu-item"><a href="#" class="active">All</a></li>
 							<li class="menu-item"><a href="#">Painting</a></li>
 							<li class="menu-item"><a href="#">Traditional</a></li>
@@ -69,7 +57,8 @@
 							<li class="menu-item"><a href="#">3d</a></li>
 						</ul>
 					</nav>
-					<div class="container">
+					
+					<div id="portfolio" class="container">
 						<div class="square">
 							<div class="content">
 								<div class="table">
@@ -226,10 +215,64 @@
 								</div>
 							</div>
 						</div>
-
+					</div>
+					
+					<div class="pages-nav">
+						<ul class="pagination">
+							<li><a href="#"><<</a></li>
+							<li><a href="#"><</a></li>
+							<li><a href="#" class="active">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#">6</a></li>
+							<li><a href="#">7</a></li>
+							<li><a href="#">8</a></li>
+							<li><a href="#">9</a></li>
+							<li><a href="#">10</a></li>
+							<li><a href="#">11</a></li>
+							<li><a href="#">></a></li>
+							<li><a href="#">>></a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
+			<div class="section">
+				<div class="wrap">
+					<div id="search-section" class="container">
+						<div class="col">
+							<div class="col-title">Find Something</div>
+							<p>Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. </p>
+							<form id="search-form" method="get" action="">
+								<input type="search" name="lookFor" placeholder="Looking for something?"/>
+								<input type="submit" name="go" value="go"/>
+							</form>
+						</div>
+						<div class="col">
+							<div class="col-title">Information</div>
+							<p> Maecenas malesuada elit lectus felis, malesuada ultricies. 
+									Curabitur et ligula. Ut molestie a, ultricies porta urna. 
+									Vestibulum commodo volutpat a, convallis ac, laoreet enim.</p>
+								<p>Phasellus fermentum in, dolor. Pellentesque facilisis. 
+									Nulla imperdiet sit amet magna. 
+									Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. 
+									Aliquam erat ac ipsum.</p>
+						</div>
+						<div class="col">
+							<div class="col-title">Information</div>
+							<ul id="search-by" class="search-nav">
+								<li class="menu-item"><a href="#">Maecenas (2)</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="site-footer">
+				<div class="wrap">
+					Footer
+				</div>
+			</footer>
 		</div>
 	</body>
 </html>
